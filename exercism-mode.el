@@ -33,3 +33,7 @@
     (message (shell-command-to-string (concat "exercism fetch " language-name)))))
 
 (exercism-mode/started)
+
+(defun exercism-mode ()
+  (interactive)
+  (message "Exercism-mode Package Loaded!"))
