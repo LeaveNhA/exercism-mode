@@ -9,8 +9,17 @@
 ;;; License: MIT
 
 ;;; Commentary:
+;; Implement Exercism.io features so simply.
+;; [TODO "NSA Feature!"]
+
 ;;; Known Bugs:
+;; [0.0.3]
+;; Nothing right now.
+
 ;;; Versions:
+;; [0.0.3]
+;; First public version.
+
 ;;; Code:
 
 (defun exercism-mode/send-solution-to-exercism ()
