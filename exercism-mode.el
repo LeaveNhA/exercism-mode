@@ -1,6 +1,9 @@
 ;;; exercism-mode.el --- Exercism.io Layer functions File for Spacemacs
 ;;
 ;; Copyright (c) 2017 by Seçkin KÜKRER
+;; URL: https://github.com/LeaveNhA/exercism-mode
+;; Version: 0.2
+;; Keywords: exercism
 ;;
 ;; Author: Seçkin KÜKRER <seckin.kukrer@hotmail.com>
 ;; URL: https://github.com/leavenha/exercism-layer
@@ -8,6 +11,9 @@
 ;; This file is not part of GNU Emacs.
 ;;
 ;;; License: MIT
+
+
+;;; Code:
 
 (defun exercism/send-solution-to-exercism ()
   "Send the solution to Exercism.io! This command simply send the buffer-file as a solution to Exercism.io."
