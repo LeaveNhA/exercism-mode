@@ -13,10 +13,6 @@
 ;;; Versions:
 ;;; Code:
 
-(defun exercism-mode/started ()
-  (interactive)
-  (message "exercism-mode package loaded!"))
-
 (defun exercism-mode/send-solution-to-exercism ()
   "Send the solution to Exercism.io! This command simply send the buffer-file as a solution to Exercism.io."
   (interactive)
@@ -31,8 +27,6 @@
                          ("java" "java")
                          ("el" "just-for-test"))))
     (message (shell-command-to-string (concat "exercism fetch " language-name)))))
-
-(exercism-mode/started)
 
 (defun exercism-mode ()
   (interactive)
