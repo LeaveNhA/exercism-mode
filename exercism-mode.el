@@ -1,26 +1,25 @@
 ;;; exercism-mode.el --- Exercism.io Layer functions File for Spacemacs
-;;
-;; Copyright (c) 2017 by Seçkin KÜKRER
-;; URL: https://github.com/LeaveNhA/exercism-mode
-;; Version: 0.2
-;; Keywords: exercism
-;;
-;; Author: Seçkin KÜKRER <seckin.kukrer@hotmail.com>
-;; URL: https://github.com/leavenha/exercism-layer
-;;
-;; This file is not part of GNU Emacs.
-;;
+;; Author     : Seçkin KÜKRER
+;; Created    : November 2017
+;; Modified   : 2017
+;; Version    : 0.0.3
+;; Package-Version: 20170927.816
+;; Keywords   : exercism exercism.io exercism-mode
+;; X-URL      : https://github.com/leavenha/exercism-mode
+;; Last-saved : 2017-Nov-28
 ;;; License: MIT
 
-
+;;; Commentary:
+;;; Known Bugs:
+;;; Versions:
 ;;; Code:
 
-(defun exercism/send-solution-to-exercism ()
+(defun exercism-mode/send-solution-to-exercism ()
   "Send the solution to Exercism.io! This command simply send the buffer-file as a solution to Exercism.io."
   (interactive)
   (message (shell-command-to-string (concat "exercism submit " (buffer-file-name)))))
 
-(defun exercism/fetch-new-exercise ()
+(defun exercism-mode/fetch-new-exercise ()
   "Fetch a new exercise from Exercism.io! This command fetch new exercise based on opened buffer-file type/`extension`."
   (interactive)
   (let ((language-name (pcase (file-name-extension (buffer-file-name))
