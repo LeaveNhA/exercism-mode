@@ -3,7 +3,6 @@
 ;; Created    : November 2017
 ;; Modified   : 2017
 ;; Version    : 0.0.3
-;; Package-Version: 20170927.816
 ;; Keywords   : exercism exercism.io exercism-mode
 ;; X-URL      : https://github.com/leavenha/exercism-mode
 ;; Last-saved : 2017-Nov-28
@@ -13,6 +12,10 @@
 ;;; Known Bugs:
 ;;; Versions:
 ;;; Code:
+
+(defun exercism-mode/started ()
+  (interactive)
+  (message "exercism-mode package loaded!"))
 
 (defun exercism-mode/send-solution-to-exercism ()
   "Send the solution to Exercism.io! This command simply send the buffer-file as a solution to Exercism.io."
@@ -28,3 +31,5 @@
                          ("java" "java")
                          ("el" "just-for-test"))))
     (message (shell-command-to-string (concat "exercism fetch " language-name)))))
+
+(exercism-mode/started)
