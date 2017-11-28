@@ -37,3 +37,5 @@
 (defun exercism-mode ()
   (interactive)
   (message "Exercism-mode Package Loaded!"))
+
+(provide 'exercism-mode)
