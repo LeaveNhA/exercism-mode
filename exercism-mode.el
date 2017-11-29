@@ -86,9 +86,8 @@
     (if language-name
         (message (exercism-mode/call-shell-command (concat "exercism fetch " language-name)))
       (message (exercism-mode/call-shell-command
-                (read-from-minibuffer (exercism-mode/style-given-tracks
-                                       (concat (exercism-mode/call-shell-command "exercism tracks")
-                                               "\nSelect your programming language: "))))))))
+                (read-from-minibuffer (concat (exercism-mode/call-shell-command "exercism tracks")
+                                              "\nSelect your programming language: ")))))))
 
 (defun exercism-mode ()
   (interactive)
