@@ -44,8 +44,6 @@
   "highlight the language names!"
   (replace-regexp-in-string "^[\s-]+\\(.+\\)[\s-]" (lambda (s) (symbol-name (type-of s))) str))
 
-(with-temp-buffer (exercism-mode/style-given-tracks (exercism-mode/call-shell-command "exercism tracks")))
-
 (defun exercism-mode/call-shell-command (command)
   "Run the given command in the Shell!"
   (shell-command-to-string command))
