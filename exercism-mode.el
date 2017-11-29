@@ -71,6 +71,7 @@
                           ("rpt" "crystal")
                           ("d" "d")
                           ("pas" "delphi")
+                          ("php" "php")
                           ("go" "go")
                           ("ex" "elixir")
                           ("exs" "elixir")
