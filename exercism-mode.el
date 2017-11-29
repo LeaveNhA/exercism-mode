@@ -48,6 +48,9 @@
   "Run the given command in the Shell!"
   (shell-command-to-string command))
 
+(defun exercism-mode/run-fetch-with-language (language)
+  (exercism-mode/call-shell-command (concat "exercism fetch " language)))
+
 (defun exercism-mode/send-solution-to-exercism ()
   "Send the solution to Exercism.io! This command simply send the buffer-file as a solution to Exercism.io."
   (interactive)
@@ -85,7 +88,7 @@
                           )))
     (if language-name
         (message (exercism-mode/call-shell-command (concat "exercism fetch " language-name)))
-      (message (exercism-mode/call-shell-command
+      (message (exercism-mode/run-fetch-with-language
                 (read-from-minibuffer (concat (exercism-mode/call-shell-command "exercism tracks")
                                               "\nSelect your programming language: ")))))))
 
